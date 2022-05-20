@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+
+
+{% block head %}
+{% endblock %}
+
+
+{% block header %}
+{% endblock %}
+
+{% block main %}
+{% if pet.photo %}
+    <img src="{{ pet.photo.url }}" alt="photo" class="pet_img">
+{% endif %}
+    {{ pet.description|linebreaks }}
+{% endblock %}

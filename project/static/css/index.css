@@ -1,8 +1,8 @@
 * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*list-style: none;*/
+    /*text-decoration: none;*/
     font-family: Arial;
 }
 
@@ -14,6 +14,8 @@ body {
 
 .body_container {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
@@ -26,8 +28,11 @@ body {
 
 .header_title {}
 
+.header_btn {}
+
 .main {
     margin-top: 100px; /* должно быть больше или равно .header height */
+    flex-grow: 1;
     background-color: lightcyan;
 }
 
