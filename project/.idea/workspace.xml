@@ -5,48 +5,33 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/pet.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/pet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/pet_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/pet_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pet/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pet/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pet/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pet/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pet/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pet/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pet/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/views.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="Python Script" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -78,7 +63,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/main/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../test/app/main/static/main/css/main.css" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
@@ -89,9 +74,9 @@
       <recent name="E:\Inst\Project Practice\2_sem\pp56\project\pet" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Inst\Project Practice\2_sem\pp56\project\main\templates\main" />
       <recent name="E:\Inst\Project Practice\2_sem\pp56\project\static\css" />
       <recent name="E:\Inst\Project Practice\2_sem\pp56\project\main\static\main\css" />
+      <recent name="E:\Inst\Project Practice\2_sem\pp56\project\main\templates\main" />
     </key>
   </component>
   <component name="RunManager">
@@ -134,6 +119,8 @@
       <workItem from="1652977276301" duration="3132000" />
       <workItem from="1652980647768" duration="365000" />
       <workItem from="1653049872617" duration="23878000" />
+      <workItem from="1653119848894" duration="16327000" />
+      <workItem from="1653151144982" duration="24817000" />
     </task>
     <servers />
   </component>

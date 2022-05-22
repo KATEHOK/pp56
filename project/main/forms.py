@@ -6,13 +6,18 @@ from django.core.exceptions import ValidationError
 from .models import *
 
 class AddPetForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['species'].empty_label = 'Вид не выбран'
+        self.fields['owner'].empty_label = 'Хозяин не выбран'
+
     class Meta:
         model = Pet
-        fields = ['name', 'slug', 'description', 'photo', 'is_published']
+        fields = ['name', 'slug', 'description', 'photo', 'species', 'owner', 'is_published']
         widgets = {
             'name': forms.TextInput(attrs={'class': 'input_txt'}),
             'slug': forms.TextInput(attrs={'class': 'input_txt'}),
-            'description': forms.Textarea(attrs={'class': 'input_txt_area'})
+            'description': forms.Textarea(attrs={'class': 'input_txt_area'}),
         }
     def clean_name(self):
         name = self.cleaned_data['name']
@@ -33,7 +38,7 @@ class RegisterUserForm(UserCreationForm):
     password1 = forms.CharField(label='Пароль', widget=forms.PasswordInput(attrs={'class': 'input_txt'}))
     password2 = forms.CharField(label='Повтор пароля', widget=forms.PasswordInput(attrs={'class': 'input_txt'}))
     class Meta:
-        model = User
+        model = Person
         fields = ('username', 'email', 'password1', 'password2')
 
 

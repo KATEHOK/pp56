@@ -13,28 +13,52 @@
     <body>
         <div class="body_container">
             <header class="header">
-                {% for item in menu %}
-                    <a href="{% url item.url_name %}" class="header_link">{{ item.title }}</a>
-                {% endfor %}
-                {% block header %}{% endblock %}
-                {% if request.user.is_authenticated %}
-                    <div class="header_last">
-                        {{ user.username }}
-                        &nbsp;|&nbsp;
-{#                        <a href="{% url index %}" class="header_link">Выйти</a>#}
-                        <a href="{% url 'logout' %}" class="header_link">Выйти</a>
-                    </div>
-                {% else %}
-                    <div class="header_last">
-                        <a href="{% url 'register' %}" class="header_link">Регистрация</a>
-                        &nbsp;|&nbsp;
-                        <a href="{% url 'login' %}" class="header_link">Вход</a>
-                    </div>
-                {% endif %}
+                <div class="header_first">
+                    {% for item in menu %}
+                        {% if loop.last %}
+                            <a href="{% url item.url_name %}" class="header_txt last link_effect">{{ item.title }}</a>
+                        {% else %}
+                            <a href="{% url item.url_name %}" class="header_txt not_last link_effect">{{ item.title }}</a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="header_last">
+                    {% if request.user.is_authenticated %}
+                        <p class="header_txt">{{ user.username }}&nbsp;|&nbsp;</p>
+                        <a href="{% url 'logout' %}" class="header_link header_txt last link_effect">Выход</a>
+                    {% else %}
+                        <a href="{% url 'register' %}" class="header_link header_txt last link_effect">Регистрация&nbsp;|&nbsp;</a>
+                        <a href="{% url 'login' %}" class="header_link header_txt last link_effect">Вход</a>
+                    {% endif %}
+                </div>
             </header>
             <main class="main">
-                <h1 class="heading">{{ title }}</h1>
-                {% block main %}{% endblock %}
+                {% if request.user.is_authenticated %}
+                    <aside class="main_aside">
+                        <a href="{% url 'all' %}" class="link_effect aside_link">Все питомцы</a>
+                        {% for item in species %}
+                            {% if loop.last %}
+                                <a href="{{ item.get_absolute_url }}" class="link_effect aside_link">{{ item.title_plural }}</a>
+                            {% else %}
+                                <a href="{{ item.get_absolute_url }}" class="link_effect aside_link">{{ item.title_plural }}</a>
+                            {% endif %}
+                        {% endfor %}
+                    </aside>
+                {% endif %}
+                <div class="main_container">
+                    <h1 class="heading">{{ title }}</h1>
+                    <div class="container">
+                        {% for pet in pets %}
+                            <a href="{{ pet.get_absolute_url }}" class="hyperlink">
+                                <h2 class="heading hyperlink_heading">{{ pet.name }}&nbsp;({{ pet.species }})</h2>
+                                {% if pet.photo %}
+                                    <img src="{{ pet.photo.url }}" alt="photo" class="pet_img">
+                                {% endif %}
+                            </a>
+                        {% endfor %}
+                        {% block main %}{% endblock %}
+                    </div>
+                </div>
             </main>
         </div>
         <footer class="footer">

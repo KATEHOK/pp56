@@ -5,12 +5,23 @@
 {% endblock %}
 
 
-{% block header %}
-{% endblock %}
-
 {% block main %}
-{% if pet.photo %}
-    <img src="{{ pet.photo.url }}" alt="photo" class="pet_img">
-{% endif %}
-    {{ pet.description|linebreaks }}
+    <div class="pet_container">
+        <div class="pet_wrapper">
+            {% if pet.photo %}
+                <img src="{{ pet.photo.url }}" alt="photo" class="pet_img">
+            {% endif %}
+            <div class="pet_info">
+                <a href="{{ pet.get_owner.get_absolute_url }}" class="pet_txt pet_link">Хозяин: {{ pet.get_owner.username }}</a>
+                <p class="pet_txt">Email:&nbsp;{{ pet.get_owner.email }}</p>
+            </div>
+        </div>
+        <div class="pet_wrapper">
+            {{ pet.description|linebreaks }}
+            <div class="btns">
+                <a href="{{ pet.get_edit_url }}" class="btn">Изменить</a>
+                <a href="{{ pet.get_delete_url }}" class="btn last">Удалить</a>
+            </div>
+        </div>
+    </div>
 {% endblock %}

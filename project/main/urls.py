@@ -10,7 +10,12 @@ urlpatterns = [
     path('login', LoginUser.as_view(), name='login'),
     path('logout', logout_user, name='logout'),
     path('pet_add', AddPet.as_view(), name='pet_add'),
-    path('pet/<slug:pet_slug>', ShowPet.as_view(), name='pet')
+    path('pet/<slug:pet_slug>', ShowPet.as_view(), name='pet'),
+    path('species_all', show_all, name='all'),
+    path('species/<slug:species_slug>', show_species, name='species'),
+    path('user/<int:user_id>', show_user, name='user'),
+    path('pet_edit/<slug:pet_slug>', pet_edit, name='pet_edit'),
+    path('pet_delete/<slug:pet_slug>', pet_delete, name='pet_delete'),
 ]
 
 if settings.DEBUG:
